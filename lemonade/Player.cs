@@ -97,6 +97,35 @@ namespace lemonade
             return amountToBuy;
         }
 
-        
+        public void GetRecipe(double amount)
+        {
+            Console.WriteLine("You have " + inventory.GetLemonList.Count + " lemons.");
+            LemonsToRemove(amount);
+            Console.WriteLine("You have " + inventory.GetSugarList.Count + " sugar.");
+            SugarToRemove(amount);
+            Console.WriteLine("You have " + inventory.GetIceList.Count + " ice.");
+            IceToRemove(amount);
+        }
+
+        public void LemonsToRemove(double amount)
+        {
+            double number = 0;
+            number = AskLemonAmount(amount);
+
+            if (number * amount > inventory.GetLemonList.Count)
+            {
+                Console.WriteLine("You don't have that many lemons.");
+                LemonsToRemove(amount);
+            }
+            else
+            {
+                for (double i = 0; i <= number; i++)
+                {
+                    inventory.RemoveLemon();
+                }
+            }
+        }
+
+
     }
 }

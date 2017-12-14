@@ -125,6 +125,23 @@ namespace lemonade
                 }
             }
         }
+        public void SugarToRemove(double amount)
+        {
+            double number = 0;
+            number = AskSugarAmount(amount);
+
+            if(number * amount > inventory.GetSugarList.Count)
+            {
+                Console.WriteLine("You don't have that many sugar");
+            }
+            else
+            {
+                for(double i = 0; i <= number; i++)
+                {
+                    inventory.RemoveSugar();
+                }
+            }
+        }
 
 
     }

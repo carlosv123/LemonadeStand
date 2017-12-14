@@ -6,9 +6,14 @@ using System.Threading.Tasks;
 
 namespace lemonade
 {
-     public class Sugar
+     public class Sugar : Ingredients
     {
        
+        public Sugar()
+        {
+            this.Name = "Sugar";
+            this.Price = .05;
+        }
         
     }
 }

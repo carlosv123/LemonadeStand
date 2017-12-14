@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace lemonade
 {
-     public class Ice
+     public class Ice : Ingredients
     {
+        public Ice()
+        {
+            this.Name = "Ice";
+            this.Price = .05;
+        }
     }
 }

@@ -46,6 +46,7 @@
     <Compile Include="Cup.cs" />
     <Compile Include="Ice.cs" />
     <Compile Include="Ingredients.cs" />
+    <Compile Include="Inventory.cs" />
     <Compile Include="Lemon.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

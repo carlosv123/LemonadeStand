@@ -39,17 +39,7 @@ namespace lemonade
             }
 
         }
-        public double AddRemoveMoney
-        {
-            get
-            {
-                return wallet;
-            }
-            set
-            {
-
-            }
-        }
+      
         public void GetPlayer()
         {
             Console.WriteLine("Please enter your name");
@@ -141,6 +131,159 @@ namespace lemonade
                     inventory.RemoveSugar();
                 }
             }
+        }
+        public void IceToRemove(double amount)
+        {
+            double number = 0;
+            number = AskIceAmount(amount);
+
+            if(number * amount > inventory.GetIceList.Count)
+            {
+                Console.WriteLine("You don't have that many ice");
+            }
+            else
+            {
+                for  (double i = 0; i <= number; i++)
+                {
+                    inventory.RemoveIce();
+                }
+            }
+        }
+        public double AddRemoveMoney
+        {
+            get
+            {
+                return wallet;
+            }
+            set
+            {
+                wallet = value;
+            }
+        }
+        public Inventory GetInventory
+        {
+            get
+            {
+                return inventory;
+            }
+        }
+        public void GetProfitLoss(double cost, double sales)
+        {
+            double amount = 0;
+
+            if(sales > cost)
+            {
+                amount = sales - cost;
+                Console.WriteLine("Today's profit is; " + amount);
+                GetProfit += amount;
+            }
+            else
+            {
+                amount = cost - sales;
+                Console.WriteLine("Today's loss is: " + amount);
+                GetLoss += amount;
+            }
+        }
+        public double GetProfit
+        {
+            get
+            {
+                return profit;
+            }
+            set
+            {
+                profit = value;
+            }
+        }
+
+        public double GetLoss
+        {
+            get
+            {
+                return loss;
+            }
+            set
+            {
+                loss = value;
+            }
+        }
+
+        public double GetNet
+        {
+            get
+            {
+                return netProfitLoss;
+            }
+            set
+            {
+                netProfitLoss = value;
+            }
+        }
+        public void GetNetProfitLoss()
+        {
+            GetNet = GetProfit - GetLoss;
+
+            if (profit > loss)
+            {
+                Console.WriteLine("You have a net income of: " + GetNet);
+                Console.ReadLine();
+            }
+            else if (loss > profit)
+            {
+                Console.WriteLine("You have a net loss of: " + GetLoss);
+                Console.ReadLine();
+
+            }
+            else
+            {
+                Console.WriteLine("Your even");
+                Console.ReadLine();
+            }
+        }
+        public double AskLemonAmount(double amount)
+        {
+            double lemon = 0;
+            Console.WriteLine("How many lemons would you like to add to your recipe?" + amount + "for the number of batches");
+
+            try
+            {
+                lemon = double.Parse(Console.ReadLine());
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine(" That was not a valid number");
+            }
+            return lemon;
+        }
+        public  double AskIceAmount(double amount)
+        {
+            double ice = 0;
+            Console.WriteLine("How mauch ice would you like to add to your recipe?" + amount + "for the number of batches");
+
+            try
+            {
+                ice = double.Parse(Console.ReadLine());
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine(" That was not a valid number");
+            }
+            return ice;
+        }
+        public double AskSugarAmount(double amount)
+        {
+            double sugar = 0;
+            Console.WriteLine("How mauch ice would you like to add to your recipe?" + amount + "for the number of batches");
+
+            try
+            {
+                sugar = double.Parse(Console.ReadLine());
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine(" That was not a valid number");
+            }
+            return sugar;
         }
 
 

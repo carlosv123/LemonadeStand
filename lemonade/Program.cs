@@ -10,6 +10,8 @@ namespace lemonade
     {
         static void Main(string[] args)
         {
+            userInterface lemondatestand = new userInterface();
+              lemondatestand.Start();
         }
     }
 }

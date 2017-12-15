@@ -1,1 +1,6 @@
 C:\Users\vasqu\Desktop\lemonade\lemonade\bin\Debug\lemonade.exe.config
+C:\Users\vasqu\Desktop\lemonade\lemonade\bin\Debug\lemonade.exe
+C:\Users\vasqu\Desktop\lemonade\lemonade\bin\Debug\lemonade.pdb
+C:\Users\vasqu\Desktop\lemonade\lemonade\obj\Debug\lemonade.csprojResolveAssemblyReference.cache
+C:\Users\vasqu\Desktop\lemonade\lemonade\obj\Debug\lemonade.exe
+C:\Users\vasqu\Desktop\lemonade\lemonade\obj\Debug\lemonade.pdb

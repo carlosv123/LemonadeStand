@@ -11,10 +11,20 @@ namespace lemonade
      public class Customer
     {
         private double thirst;
+        private string weather;
+        private double temperature;
+        private double price;
 
         public Customer()
         {
             
+        }
+
+        public Customer(string weather, double temperature, double price)
+        {
+            this.weather = weather;
+            this.temperature = temperature;
+            this.price = price;
         }
 
         public void GetTimer(string weather, double temperature, double price)
